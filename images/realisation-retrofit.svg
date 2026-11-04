@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="Plan d'ensemble d'un mécanisme à pignons et carter">
+<style>.b{fill:#eef3f8}.l{stroke:#1f4e79;fill:none;stroke-width:2.5}.t{stroke:#1f4e79;fill:none;stroke-width:1;stroke-dasharray:6 4;opacity:.6}.ax{stroke:#c9771a;stroke-width:1;stroke-dasharray:10 3 2 3}.k{fill:#f2a33a}
+@media (prefers-color-scheme:dark){.b{fill:#16222e}.l,.t{stroke:#9cc4ea}.ax{stroke:#f2a33a}}</style>
+<rect class="b" width="400" height="260"/>
+<rect class="t" x="50" y="40" width="300" height="180" rx="18"/>
+<path class="ax" d="M40 130h320M145 30v200M265 30v200"/>
+<g class="l"><circle cx="145" cy="130" r="62"/><circle cx="145" cy="130" r="48"/><circle cx="145" cy="130" r="14"/>
+<circle cx="265" cy="130" r="38"/><circle cx="265" cy="130" r="26"/><circle cx="265" cy="130" r="10"/></g>
+<circle class="k" cx="145" cy="130" r="5"/><circle class="k" cx="265" cy="130" r="4"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Plan technique d'une bride usinée, vue de face et vue en coupe">
+<style>
+.f{fill:#eef3f8}.l{stroke:#1f4e79;fill:none;stroke-width:2.5}.t{stroke:#1f4e79;fill:none;stroke-width:1;opacity:.55}.a{stroke:#c9771a;fill:none;stroke-width:1.2}.ax{stroke:#c9771a;stroke-dasharray:10 3 2 3;stroke-width:1}.h{stroke:#1f4e79;stroke-width:1;opacity:.5}.x{font:600 12px system-ui,sans-serif;fill:#c9771a}.g{stroke:#1f4e79;opacity:.08}
+@media (prefers-color-scheme:dark){.f{fill:#16222e}.l{stroke:#9cc4ea}.t,.h{stroke:#9cc4ea}.g{stroke:#9cc4ea;opacity:.1}.a,.ax{stroke:#f2a33a}.x{fill:#f2a33a}}
+</style>
+<rect class="f" width="480" height="360" rx="16"/>
+<g class="g"><path d="M0 40h480M0 80h480M0 120h480M0 160h480M0 200h480M0 240h480M0 280h480M0 320h480M40 0v360M80 0v360M120 0v360M160 0v360M200 0v360M240 0v360M280 0v360M320 0v360M360 0v360M400 0v360M440 0v360"/></g>
+<!-- vue de face -->
+<path class="ax" d="M50 180h240M170 60v240"/>
+<circle class="l" cx="170" cy="180" r="100"/>
+<circle class="l" cx="170" cy="180" r="38"/>
+<circle class="t" cx="170" cy="180" r="70" stroke-dasharray="6 4"/>
+<g class="l"><circle cx="240" cy="180" r="10"/><circle cx="100" cy="180" r="10"/><circle cx="170" cy="110" r="10"/><circle cx="170" cy="250" r="10"/></g>
+<!-- vue en coupe -->
+<path class="ax" d="M375 60v240"/>
+<path class="l" d="M345 80h60v62h-12v76h12v62h-60v-62h12v-76h-12z"/>
+<g class="h"><path d="M345 92l12-12M345 108l28-28M345 124l44-44M357 128l48-48M393 108l12-12M345 290l12-12M345 274l28-28M345 258l44-44M357 254l48-48M393 274l12-12"/></g>
+<!-- cotes -->
+<path class="a" d="M70 330h200M70 322v16M270 322v16"/>
+<text class="x" x="150" y="324">Ø200</text>
+<path class="a" d="M432 80v200M424 80h16M424 280h16"/>
+<text class="x" x="438" y="185">40</text>
+<text class="x" x="300" y="44">A–A</text>
+</svg>
