@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Romain Arnoux — Conception mécanique et CAO pour artisans et PME</title>
-<meta name="description" content="Conception mécanique, modélisation 3D et plans de fabrication pour artisans et petites entreprises. Devis gratuit sous 48 h, par mail ou téléphone.">
+<title>Romain Arnoux | Conception mécanique et CAO pour artisans et PME</title>
+<meta name="description" content="Étudiant ingénieur en mécanique à l’UTC, je conçois des pièces, des outillages et des plans de fabrication pour les artisans et les petites entreprises. Devis gratuit.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f7f9fb" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0f1720" media="(prefers-color-scheme: dark)">
@@ -14,9 +14,9 @@
   --bg:#f7f9fb; --surface:#ffffff; --surface-2:#eef3f8;
   --text:#14202b; --muted:#4f5f6e; --line:#d9e2ea;
   --primary:#1f4e79; --primary-strong:#163a5c; --on-primary:#ffffff;
-  --accent:#c9771a; --accent-soft:#fbeedd;
-  --radius:14px; --shadow:0 1px 2px rgba(20,32,43,.06),0 6px 24px rgba(20,32,43,.06);
-  --max:1080px;
+  --accent:#c9771a;
+  --radius:8px;
+  --max:1040px;
   --font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 @media (prefers-color-scheme:dark){
@@ -24,8 +24,7 @@
     --bg:#0f1720; --surface:#16212c; --surface-2:#1b2835;
     --text:#e6edf3; --muted:#a3b2c0; --line:#2a3a4a;
     --primary:#9cc4ea; --primary-strong:#c1dbf3; --on-primary:#0f1720;
-    --accent:#f2a33a; --accent-soft:#2e2414;
-    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 24px rgba(0,0,0,.25);
+    --accent:#f2a33a;
   }
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -34,140 +33,125 @@ html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100
 body{margin:0;background:var(--bg);color:var(--text);font:400 1.0625rem/1.6 var(--font);padding-bottom:76px}
 img{max-width:100%;height:auto;display:block}
 a{color:var(--primary)}
-a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
-h1,h2,h3{line-height:1.2;margin:0 0 .6em;text-wrap:balance}
-h1{font-size:clamp(2rem,7vw,3.1rem);letter-spacing:-.02em}
-h2{font-size:clamp(1.55rem,5vw,2.1rem);letter-spacing:-.01em}
-h3{font-size:1.15rem}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{line-height:1.25;margin:0 0 .6em;text-wrap:balance}
+h1{font-size:clamp(1.75rem,6vw,2.5rem);letter-spacing:-.015em}
+h2{font-size:clamp(1.45rem,4.5vw,1.9rem);letter-spacing:-.01em}
+h3{font-size:1.1rem}
 p{margin:0 0 1em}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
 .skip{position:absolute;left:-999px;top:8px;background:var(--surface);padding:8px 12px;z-index:100}
 .skip:focus{left:8px}
 
 /* En-tête */
-header.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+header.top{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:60px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--text);text-decoration:none}
-.brand img{width:30px;height:30px}
+.brand img{width:28px;height:28px}
 .brand small{display:block;font-weight:500;color:var(--muted);font-size:.78rem;line-height:1.1}
 nav.main{display:none}
 nav.main a{color:var(--muted);text-decoration:none;font-size:.95rem;padding:6px 2px}
 nav.main a:hover{color:var(--text)}
 
 /* Boutons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 20px;border-radius:999px;font-weight:650;text-decoration:none;border:2px solid transparent;font-size:1rem;transition:background .15s,color .15s,border-color .15s}
-.btn svg{width:20px;height:20px;flex:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 20px;border-radius:6px;font-weight:600;text-decoration:none;border:1px solid transparent;font-size:1rem;transition:background .15s,border-color .15s}
+.btn svg{width:18px;height:18px;flex:none}
 .btn-primary{background:var(--primary);color:var(--on-primary)}
 .btn-primary:hover{background:var(--primary-strong)}
 .btn-ghost{border-color:var(--line);color:var(--text);background:var(--surface)}
 .btn-ghost:hover{border-color:var(--primary)}
-.btn-sm{min-height:40px;padding:8px 16px;font-size:.92rem}
+.btn-sm{min-height:40px;padding:8px 14px;font-size:.92rem}
 .top .btn-sm{display:none}
 
 /* Sections */
-section{padding:64px 0}
+section{padding:56px 0}
 section+section{border-top:1px solid var(--line)}
-.eyebrow{display:inline-block;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:.6em}
-.lead{font-size:1.15rem;color:var(--muted);max-width:60ch}
-.section-head{max-width:640px;margin-bottom:32px}
-.section-head p{color:var(--muted)}
+.intro{color:var(--muted);max-width:62ch;margin-bottom:28px}
 
 /* Accroche */
-.hero{padding:40px 0 56px}
+.hero{padding:36px 0 48px}
 .hero-grid{display:grid;gap:32px}
-.hero h1 em{font-style:normal;color:var(--primary)}
-.hero .ctas{display:flex;flex-direction:column;gap:12px;margin:24px 0 20px}
-.reassure{list-style:none;padding:0;margin:0;display:grid;gap:8px;color:var(--muted);font-size:.95rem}
-.reassure li{display:flex;gap:10px;align-items:flex-start}
-.reassure li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--accent-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%23c9771a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
-.hero figure{margin:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line)}
+.kicker{color:var(--muted);font-size:.95rem;margin-bottom:.8em}
+.hero .lead{font-size:1.1rem;color:var(--muted);max-width:58ch}
+.hero .ctas{display:flex;flex-direction:column;gap:10px;margin:24px 0 16px}
+.hero .note{color:var(--muted);font-size:.95rem;margin:0}
+.hero figure{margin:0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
 
 /* Services */
-.cards{display:grid;gap:16px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
-.card .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--surface-2);color:var(--primary);margin-bottom:14px}
-.card .ico svg{width:24px;height:24px}
-.card p{color:var(--muted);margin:0}
-.card ul{margin:.8em 0 0;padding-left:1.1em;color:var(--muted);font-size:.95rem}
-.tools{margin-top:24px;color:var(--muted);font-size:.95rem}
+.services{display:grid;gap:28px}
+.service{border-top:2px solid var(--primary);padding-top:16px}
+.service p{color:var(--muted);margin:0}
+.tools{margin:32px 0 0;padding:14px 16px;background:var(--surface-2);border-radius:var(--radius);font-size:.95rem;color:var(--muted)}
 .tools strong{color:var(--text)}
 
 /* Déroulé */
-.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
-.steps li{position:relative;padding:0 0 28px 60px;counter-increment:s}
-.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:700;background:var(--primary);color:var(--on-primary)}
-.steps li::after{content:"";position:absolute;left:20px;top:46px;bottom:4px;width:2px;background:var(--line)}
-.steps li:last-child{padding-bottom:0}
-.steps li:last-child::after{display:none}
-.steps h3{margin:.45em 0 .3em}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:22px;counter-reset:s}
+.steps li{position:relative;padding-left:48px;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.95rem;border:2px solid var(--primary);color:var(--primary)}
+.steps h3{margin:.2em 0 .25em}
 .steps p{color:var(--muted);margin:0}
-.steps .when{display:inline-block;margin-top:6px;font-size:.85rem;font-weight:600;color:var(--accent)}
 
 /* Réalisations */
 .works{display:grid;gap:20px}
-.work{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin:0}
+.work{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:0}
 .work img{aspect-ratio:400/260;width:100%;object-fit:cover;border-bottom:1px solid var(--line)}
-.work figcaption{padding:20px}
-.work .client{font-size:.85rem;font-weight:600;color:var(--accent);margin-bottom:4px}
+.work figcaption{padding:18px}
+.work .client{font-size:.85rem;color:var(--muted);margin-bottom:4px}
 .work p{color:var(--muted);margin:0 0 .6em}
-.work .result{color:var(--text);font-weight:600;margin:0}
+.work .result{color:var(--text);margin:0}
 
 /* À propos */
-.about-grid{display:grid;gap:28px;align-items:start}
-.about-grid img{width:160px;height:160px;border-radius:50%;border:4px solid var(--surface);box-shadow:var(--shadow);object-fit:cover}
-.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
-.fact{background:var(--surface-2);border-radius:12px;padding:14px}
-.fact strong{display:block;font-size:1rem}
-.fact span{color:var(--muted);font-size:.9rem}
+.about-grid{display:grid;gap:24px;align-items:start}
+.about-grid img{width:140px;height:140px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
+.about-grid p{max-width:64ch}
+.cv{margin:24px 0 0;display:grid;gap:0;border-top:1px solid var(--line);max-width:64ch}
+.cv div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.cv dt{color:var(--muted);font-size:.95rem}
+.cv dd{margin:0}
 
 /* Contact */
 .contact{background:var(--surface-2)}
-.contact-box{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px 20px;box-shadow:var(--shadow)}
 .contact-list{list-style:none;padding:0;margin:24px 0;display:grid;gap:12px}
-.contact-list a{display:flex;align-items:center;gap:14px;padding:16px;border:1px solid var(--line);border-radius:14px;text-decoration:none;color:var(--text);background:var(--bg);word-break:break-word}
+.contact-list a{display:flex;align-items:center;gap:14px;padding:16px;border:1px solid var(--line);border-radius:var(--radius);text-decoration:none;color:var(--text);background:var(--surface);word-break:break-word}
 .contact-list a:hover{border-color:var(--primary)}
-.contact-list svg{width:26px;height:26px;flex:none;color:var(--primary)}
+.contact-list svg{width:24px;height:24px;flex:none;color:var(--primary)}
 .contact-list small{display:block;color:var(--muted);font-size:.85rem}
 .contact-list b{font-size:1.05rem}
-.tips{color:var(--muted);font-size:.95rem;margin:0}
+.tips{color:var(--muted);font-size:.95rem;margin:0;max-width:62ch}
 .tips ul{margin:.4em 0 0;padding-left:1.1em}
 
 /* Mentions légales */
 .legal{font-size:.92rem;color:var(--muted)}
-.legal h2{font-size:1.3rem;color:var(--text)}
+.legal h2{font-size:1.25rem;color:var(--text)}
 .legal h3{font-size:1rem;color:var(--text);margin-top:1.4em}
-.legal p{margin:0 0 .6em}
+.legal p{margin:0 0 .6em;max-width:80ch}
 footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
 footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
 
-/* Barre d'appel mobile */
-.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+/* Barre de contact mobile */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--bg);border-top:1px solid var(--line)}
 .callbar .btn{min-height:48px;padding:10px 12px}
 
 /* Tablette et plus */
 @media (min-width:640px){
   .hero .ctas{flex-direction:row;flex-wrap:wrap}
-  .cards{grid-template-columns:1fr 1fr}
   .works{grid-template-columns:1fr 1fr}
-  .contact-box{padding:40px}
-  .contact-list{grid-template-columns:1fr 1fr}
+  .contact-list{grid-template-columns:1fr 1fr;max-width:720px}
 }
 @media (min-width:900px){
   body{padding-bottom:0}
   .callbar{display:none}
   nav.main{display:flex;gap:22px}
   .top .btn-sm{display:inline-flex}
-  section{padding:88px 0}
-  .hero{padding:64px 0 88px}
+  section{padding:80px 0}
+  .hero{padding:56px 0 80px}
   .hero-grid{grid-template-columns:1.1fr 1fr;align-items:center;gap:56px}
-  .cards{grid-template-columns:repeat(3,1fr)}
+  .services{grid-template-columns:repeat(3,1fr);gap:32px}
   .works{grid-template-columns:repeat(3,1fr)}
-  .steps{grid-template-columns:repeat(5,1fr);gap:20px}
-  .steps li{padding:56px 0 0}
-  .steps li::after{left:52px;right:-14px;top:20px;bottom:auto;width:auto;height:2px}
-  .about-grid{grid-template-columns:200px 1fr;gap:48px}
-  .about-grid img{width:200px;height:200px}
-  .facts{grid-template-columns:repeat(4,1fr)}
+  .steps{grid-template-columns:repeat(5,1fr);gap:24px}
+  .steps li{padding:44px 0 0}
+  .about-grid{grid-template-columns:180px 1fr;gap:48px}
+  .about-grid img{width:180px;height:180px}
 }
 </style>
 </head>
@@ -177,7 +161,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#accueil" aria-label="Romain Arnoux, retour en haut de page">
-      <img src="images/favicon.svg" alt="" width="30" height="30">
+      <img src="images/favicon.svg" alt="" width="28" height="28">
       <span>Romain Arnoux<small>Conception mécanique &amp; CAO</small></span>
     </a>
     <nav class="main" aria-label="Navigation principale">
@@ -196,24 +180,20 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
 <section class="hero" id="accueil">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">Artisans · TPE · PME</span>
-      <h1>Votre idée de pièce, <em>prête à fabriquer.</em></h1>
-      <p class="lead">Je conçois vos pièces, outillages et petits mécanismes en 3D, puis je vous livre des plans cotés que votre usineur, votre chaudronnier ou vous-même pouvez utiliser directement.</p>
+      <p class="kicker">Romain Arnoux, étudiant ingénieur en mécanique à l’UTC</p>
+      <h1>Conception mécanique et plans de fabrication pour artisans et PME</h1>
+      <p class="lead">Vous avez besoin d’une pièce, d’un outillage ou d’une modification sur une machine, sans pour autant faire appel à un bureau d’études. Je m’occupe de la conception en 3D et je vous fournis des plans cotés que votre fournisseur peut utiliser tels quels.</p>
       <div class="ctas">
         <a class="btn btn-primary" href="tel:+33600000000">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
-          Appeler : 06 00 00 00 00
+          06 00 00 00 00
         </a>
-        <a class="btn btn-ghost" href="mailto:contact@exemple.fr?subject=Demande%20de%20devis%20%E2%80%94%20conception%20m%C3%A9canique">
+        <a class="btn btn-ghost" href="mailto:contact@exemple.fr?subject=Demande%20de%20devis%20%3A%20conception%20m%C3%A9canique">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
-          Décrire mon projet par mail
+          Envoyer un mail
         </a>
       </div>
-      <ul class="reassure">
-        <li>Premier échange et devis gratuits, réponse sous 48 h</li>
-        <li>Prix fixé à l’avance, sans surprise</li>
-        <li>Fichiers 3D et plans PDF livrés, ils vous appartiennent</li>
-      </ul>
+      <p class="note">Premier échange et devis gratuits. Les fichiers livrés vous appartiennent.</p>
     </div>
     <figure>
       <img src="images/hero-plan.svg" alt="Plan technique d’une bride : vue de face et vue en coupe, avec cotes" width="480" height="360">
@@ -224,49 +204,37 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
 <!-- ========== SERVICES ========== -->
 <section id="services">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Services</span>
-      <h2>Ce que je peux faire pour vous</h2>
-      <p>Pas besoin d’un bureau d’études complet pour une pièce ou un outillage. Je m’occupe de la partie conception, vous gardez la main sur la fabrication.</p>
-    </div>
-    <div class="cards">
-      <article class="card">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/></svg></div>
+    <h2>Services</h2>
+    <p class="intro">Je prends en charge la conception. La fabrication reste chez vos fournisseurs habituels, ou dans votre atelier.</p>
+    <div class="services">
+      <div class="service">
         <h3>Conception de pièces</h3>
-        <p>À partir d’un croquis, d’une photo ou d’une pièce existante, je modélise en 3D une pièce fiable et fabricable.</p>
-        <ul><li>Pièces usinées, tôlerie, impression 3D</li><li>Choix des matériaux et des tolérances</li></ul>
-      </article>
-      <article class="card">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
+        <p>À partir d’un croquis, de photos ou d’une pièce existante à reproduire. Pièces usinées, en tôle ou imprimées en 3D, avec le choix de la matière et des tolérances.</p>
+      </div>
+      <div class="service">
         <h3>Plans de fabrication</h3>
-        <p>Des mises en plan claires et cotées, prêtes à envoyer à votre fournisseur pour un devis ou une fabrication.</p>
-        <ul><li>Plans PDF et fichiers STEP / DXF</li><li>Nomenclature pour les ensembles</li></ul>
-      </article>
-      <article class="card">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></div>
+        <p>Mises en plan cotées en PDF, fichiers 3D (STEP, IGES) et DXF pour la découpe. Nomenclature fournie lorsqu’il s’agit d’un assemblage.</p>
+      </div>
+      <div class="service">
         <h3>Outillages et petits mécanismes</h3>
-        <p>Gabarits, montages, supports, adaptations de machines : des solutions pour gagner du temps à l’atelier.</p>
-        <ul><li>Vérification par calcul simple ou simulation</li><li>Amélioration d’une pièce qui casse ou s’use</li></ul>
-      </article>
+        <p>Gabarits, montages de perçage ou de soudage, supports, adaptations sur machine. Calculs de dimensionnement quand la pièce travaille.</p>
+      </div>
     </div>
-    <p class="tools"><strong>Outils :</strong> SolidWorks, Fusion 360, FreeCAD. Je peux reprendre vos fichiers existants (STEP, IGES, DXF, STL).</p>
+    <p class="tools"><strong>Logiciels :</strong> Creo et CATIA pour la CAO, MATLAB pour les calculs. Je peux repartir de vos fichiers existants (STEP, IGES, DXF).</p>
   </div>
 </section>
 
 <!-- ========== DÉROULÉ ========== -->
 <section id="deroule">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Déroulé d’une mission</span>
-      <h2>Simple, du premier appel à la livraison</h2>
-      <p>Vous savez à chaque étape ce qui se passe, ce que ça coûte et quand vous serez livré.</p>
-    </div>
+    <h2>Comment se passe une mission</h2>
+    <p class="intro">Rien ne démarre sans un devis accepté, et vous voyez le travail avant la livraison finale.</p>
     <ol class="steps">
-      <li><h3>Échange</h3><p>Vous m’expliquez votre besoin par téléphone ou par mail, avec photos ou croquis si vous en avez.</p><span class="when">Gratuit · 15 à 30 min</span></li>
-      <li><h3>Devis</h3><p>Je vous envoie un devis clair : ce qui est livré, le prix et le délai. Rien ne démarre sans votre accord.</p><span class="when">Sous 48 h</span></li>
-      <li><h3>Conception</h3><p>Je modélise la pièce et vous montre une première version pour valider les choix importants.</p><span class="when">Points réguliers</span></li>
-      <li><h3>Ajustements</h3><p>Vous faites vos retours, je corrige. Un aller-retour de modifications est inclus dans le devis.</p><span class="when">Inclus</span></li>
-      <li><h3>Livraison</h3><p>Vous recevez les fichiers 3D et les plans, prêts pour la fabrication. Je reste joignable pour vos questions.</p><span class="when">Fichiers à vous</span></li>
+      <li><h3>Premier contact</h3><p>Vous m’appelez ou m’écrivez avec ce que vous avez : photos, croquis, cotes relevées, pièce d’origine.</p></li>
+      <li><h3>Devis</h3><p>Je vous envoie un devis qui précise ce qui sera livré, le prix et le délai.</p></li>
+      <li><h3>Conception</h3><p>Je modélise la pièce et vous montre une première version pour valider les points importants.</p></li>
+      <li><h3>Corrections</h3><p>Vous me faites vos retours et je reprends ce qui doit l’être. Une série de modifications est comprise dans le devis.</p></li>
+      <li><h3>Livraison</h3><p>Je vous envoie les plans et les fichiers 3D. Si votre fournisseur a une question sur un plan, il peut me joindre directement.</p></li>
     </ol>
   </div>
 </section>
@@ -277,11 +245,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
      captures dans images/ avant la mise en ligne. -->
 <section id="realisations">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Réalisations</span>
-      <h2>Quelques projets</h2>
-      <p>Des besoins concrets, souvent partis d’un simple croquis sur un coin d’établi.</p>
-    </div>
+    <h2>Réalisations</h2>
     <div class="works">
       <figure class="work">
         <img src="images/realisation-support.svg" alt="Rendu 3D d’un support de fixation en tôle pliée" width="400" height="260" loading="lazy">
@@ -318,18 +282,17 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
 <section id="a-propos">
   <div class="wrap about-grid">
     <!-- À REMPLACER : mettez votre photo (ex. images/portrait.jpg, carrée, 400×400 px). -->
-    <img src="images/portrait.svg" alt="Photo de Romain Arnoux" width="200" height="200" loading="lazy">
+    <img src="images/portrait.svg" alt="Photo de Romain Arnoux" width="180" height="180" loading="lazy">
     <div>
-      <span class="eyebrow">À propos</span>
-      <h2>Romain Arnoux, élève-ingénieur en mécanique</h2>
-      <p>Je suis en formation d’ingénieur en génie mécanique et je mets mes compétences en conception au service des artisans et des petites entreprises qui n’ont pas de bureau d’études.</p>
-      <p>Ce que je vous apporte : de la rigueur sur les plans, du temps pour comprendre votre métier et des tarifs adaptés aux petites séries et aux pièces uniques. Si une demande dépasse ce que je sais faire correctement, je vous le dis tout de suite.</p>
-      <div class="facts">
-        <div class="fact"><strong>Réponse sous 48 h</strong><span>même en période de cours</span></div>
-        <div class="fact"><strong>Devis gratuit</strong><span>et sans engagement</span></div>
-        <div class="fact"><strong>À distance</strong><span>ou sur place près de chez moi</span></div>
-        <div class="fact"><strong>Confidentialité</strong><span>vos plans restent à vous</span></div>
-      </div>
+      <h2>À propos</h2>
+      <p>Je m’appelle Romain Arnoux. Je suis en 4<sup>e</sup> année à l’UTC (Université de technologie de Compiègne), en ingénierie mécanique.</p>
+      <p>En parallèle de mes études, je travaille pour des artisans et des petites entreprises qui ont un besoin ponctuel en conception et pas de bureau d’études en interne. Mes tarifs sont pensés pour les pièces uniques et les petites séries.</p>
+      <p>Si une demande dépasse mes compétences, je vous le dis dès le premier échange.</p>
+      <dl class="cv">
+        <div><dt>Formation</dt><dd>Ingénierie mécanique, UTC (4<sup>e</sup> année)</dd></div>
+        <div><dt>Logiciels</dt><dd>Creo, CATIA, MATLAB</dd></div>
+        <div><dt>Réponse</dt><dd>Sous 48 h, devis gratuit</dd></div>
+      </dl>
     </div>
   </div>
 </section>
@@ -337,32 +300,29 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
 <!-- ========== CONTACT ========== -->
 <section class="contact" id="contact">
   <div class="wrap">
-    <div class="contact-box">
-      <span class="eyebrow">Contact</span>
-      <h2>Parlons de votre projet</h2>
-      <p class="lead">Un appel de quelques minutes suffit souvent pour savoir si je peux vous aider. Sinon, un mail avec une photo ou un croquis, et je vous réponds sous 48 h.</p>
-      <ul class="contact-list">
-        <li>
-          <a href="tel:+33600000000">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
-            <span><small>Téléphone · du lundi au samedi</small><b>06 00 00 00 00</b></span>
-          </a>
-        </li>
-        <li>
-          <a href="mailto:contact@exemple.fr?subject=Demande%20de%20devis%20%E2%80%94%20conception%20m%C3%A9canique">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
-            <span><small>E-mail · réponse sous 48 h</small><b>contact@exemple.fr</b></span>
-          </a>
-        </li>
+    <h2>Contact</h2>
+    <p class="intro">Le plus simple est de m’appeler : en quelques minutes, on voit si je peux vous aider. Vous pouvez aussi m’écrire en joignant des photos ou un croquis.</p>
+    <ul class="contact-list">
+      <li>
+        <a href="tel:+33600000000">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          <span><small>Téléphone · si je suis en cours, je vous rappelle dans la journée</small><b>06 00 00 00 00</b></span>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:contact@exemple.fr?subject=Demande%20de%20devis%20%3A%20conception%20m%C3%A9canique">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          <span><small>E-mail · réponse sous 48 h</small><b>contact@exemple.fr</b></span>
+        </a>
+      </li>
+    </ul>
+    <div class="tips">
+      Pour que je puisse chiffrer rapidement, précisez si possible :
+      <ul>
+        <li>à quoi sert la pièce et dans quelles conditions elle travaille ;</li>
+        <li>des photos, un croquis coté ou un fichier existant ;</li>
+        <li>la quantité à fabriquer et le délai souhaité.</li>
       </ul>
-      <div class="tips">
-        Pour un devis plus rapide, indiquez si possible :
-        <ul>
-          <li>à quoi sert la pièce et dans quel environnement elle travaille ;</li>
-          <li>des photos, un croquis coté ou un fichier existant ;</li>
-          <li>la quantité à fabriquer et votre délai.</li>
-        </ul>
-      </div>
     </div>
   </div>
 </section>
@@ -402,7 +362,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
     Appeler
   </a>
-  <a class="btn btn-ghost" href="mailto:contact@exemple.fr?subject=Demande%20de%20devis%20%E2%80%94%20conception%20m%C3%A9canique">
+  <a class="btn btn-ghost" href="mailto:contact@exemple.fr?subject=Demande%20de%20devis%20%3A%20conception%20m%C3%A9canique">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
     Écrire
   </a>
